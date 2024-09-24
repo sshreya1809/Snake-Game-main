@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background: url("../img/bg.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sound{
+    position:absolute;
+    left:50px;
+
+}
+.soundon{
+    height:60px;
+    width:60px;
+}
+#board{
+    background:rgba(119, 3, 3, 0.511);
+    width:90vmin;
+    height:92vmin;
+    border: 5px solid rgb(44, 3, 3);
+    display:grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+    box-shadow:-30px 30px 20px rgba(0,0,0,0.3);
+}
+
+.head{
+    background-color: #fcba03;
+
+    border-radius: 100%;
+    box-shadow:0 0 10px #6eed37,
+    0 0 20px  #6eed37,
+    0 0 40px  #6eed37,
+    0 0 80px  #6eed37;
+    transition: 0.2s;
+}
+
+.snake{
+    background-color:rgb(0, 162, 255);
+    border:.44vmin solid rgb(255, 255, 255);
+    box-shadow:0 0 10px #edcc37,
+    0 0 20px   #edcc37,
+    0 0 40px   #edcc37,
+    0 0 80px   #edcc37;
+    border-radius:25px;
+}
+
+.food {
+    width:2.2em;
+    height:1.8em;
+    background-color:  #ff4355;
+    box-shadow: inset 0.2em -0.2em  #cc1022;
+    border-radius:2em 2em 3em 3em;
+
+  }
+
+  .food:before {
+ 
+    width:2.6em;
+    height:2.2em;
+    background-color: inherit;
+    border-radius: 3em 3em 0 0 ;
+    position: absolute;
+    box-shadow:-1.5em 0 0   #ff4355, inset .2em 0.2em  #ff4355;
+  }
+  
+  .food:after{
+    width: 0.2em;
+    height: 1em;
+    background-color:brown;
+  }
+
+#scoreBox{
+    position:absolute;
+    top:9px;
+    right:200px;
+    font-size:35px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiScoreBox{
+    position:absolute;
+    top:64px;
+    right:195px;
+    font-size:35px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+ #heading{
+    position:absolute;
+    display:flex;
+    top:264px;
+    left:20px;
+      
+    font-family: 'Bad Script',cursive;
+}
+ .headingtext{
+    margin:0;
+    padding:0;
+    color:#111;
+    font-size: 4.4em;
+}
+
+h1 span{
+    display: table-cell;
+    margin:0;
+    padding:0;
+    animation:animate 5s ease-out infinite;
+}
+
+h1 span:nth-child(1){
+    animation-delay:0s;
+}
+h1 span:nth-child(2){
+    animation-delay:0.25s;
+}
+h1 span:nth-child(3){
+    animation-delay:0.5s;
+}
+h1 span:nth-child(4){
+    animation-delay:0.75s;
+}
+h1 span:nth-child(5){
+    animation-delay:1s;
+}
+h1 span:nth-child(6){
+    animation-delay:1.25s;
+}
+h1 span:nth-child(7){
+    animation-delay:1.5s;
+}
+h1 span:nth-child(8){
+    animation-delay:1.75s;
+}
+h1 span:nth-child(9){
+    animation-delay:2s;
+}
+h1 span:nth-child(10){
+    animation-delay:2.25s;
+}
+
+@keyframes animate{
+    0%,100%{
+        color:#fff;
+        filter:blur(12);
+        transform: rotate(-40deg);
+    }
+    5%,95%{
+        color:#111;
+        filter:blur(0px);
+        text-shadow: none;
+        transform: rotate(-10deg);
+    }
+    10%{
+        transform:rotate(0deg);
+    }
+    20%{
+        transform:rotate(10deg);
+    }
+    30%{
+        transform:rotate(20deg);
+    }
+    80%{
+        transform:rotate(0deg);
+    }
+} 
+
+
+@media screen and (max-width:600px)
+{
+    
+   h1{
+    font-size:20px;
+   }
+}

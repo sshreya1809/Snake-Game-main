@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Ubuntu:wght@300&display=swap');
+body{
+    display:flex;
+    margin:0;
+    padding:0;
+    justify-content:center;
+    height:100vh;
+    background-image: linear-gradient( #9ab80a, #779900);
+    font-family: 'Bad Script',cursive;
+}
+
+h1{
+    margin:0;
+    padding:0;
+    color:#111;
+    font-size: 8em;
+}
+
+h1 span{
+    display: table-cell;
+    margin:0;
+    padding:0;
+    animation:animate 2s linear infinite;
+}
+
+h1 span:nth-child(1){
+    animation-delay:2s;
+}
+h1 span:nth-child(2){
+    animation-delay:2.2s;
+}
+h1 span:nth-child(3){
+    animation-delay:2.4s;
+}
+h1 span:nth-child(4){
+    animation-delay:2.6s;
+}
+h1 span:nth-child(5){
+    animation-delay:2.8s;
+}
+h1 span:nth-child(6){
+    animation-delay:5s;
+}
+h1 span:nth-child(7){
+    animation-delay:5.1s;
+}
+h1 span:nth-child(8){
+    animation-delay:5.2s;
+}
+h1 span:nth-child(9){
+    animation-delay:5.4s;
+}
+h1 span:nth-child(10){
+    animation-delay:5.6s;
+}
+
+
+@keyframes animate{
+    0%,100%{
+        color:#d7ef7f;
+        filter:blur(2px);
+    }
+    20%,80%{
+        color:#252f04;
+        filter:blur(0px);
+        text-shadow:none;
+    }
+} 
+
+#play {
+    position:absolute;
+    top:600px;
+    left:480px;
+    display:inline-block;
+    padding:20px 30px;
+    color:#252f04;
+    background:#66820d;
+    font-family: 'New Tegomin', serif;
+    font-family: 'Ubuntu', sans-serif;
+    border:5px solid black;
+    border-radius:20px;
+    font-weight: 800;
+    font-size: 40px;
+   
+}
+#About{
+    position:absolute;
+    top:600px;
+    right:500px;
+    display:inline-block;
+    padding:20px 18px;
+    color:#252f04;
+    background:#66820d;
+    font-family: 'New Tegomin', serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:700;
+    border:5px solid black;
+    border-radius:20px;
+    font-size: 40px;
+}
+a{
+    text-transform: uppercase;
+    color:#252f04;
+    letter-spacing: 4px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+#play:hover{
+    color:#435508;
+    background:#d7ef7f;
+    box-shadow:0 0 10px rgb(11, 11, 169),  0 0 40px  rgb(11, 11, 169), 
+    0 0 80px  rgb(11, 11, 169);
+}
+#About:hover{
+    color:#435508;
+    background:#d7ef7f;
+    box-shadow:0 0 10px #d40b0b,  0 0 40px #d40b0b, 
+    0 0 80px #d40b0b;
+}
+
+.img-hover-zoom {
+    position: absolute;
+    top:230px;
+  
+
+    height: 30px; /* [1.1] Set it as per your need */
+    width:100px;
+    left:636px;
+    align-items:center;
+    border-radius: 40px;
+
+     /* [1.2] Hide the overflowing of child elements */
+    background-repeat: no-repeat, repeat;
+    background-image: url("../img/bg.jpg"), url("../img/snake.png");
+    background-blend-mode: lighten;
+    
+  }
+  .img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:2px solid #252f04;
+  }
+  /* [2] Transition property for smooth transformation of images */
+  .img-hover-zoom img {
+    transition: transform .75s ease;
+    border:5px solid #252f04;
+  }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  .img-hover-zoom:hover img {
+    transform: scale(1.3);
+  }
+
+  h2{
+    font-size: 5em;
+    font-weight: 500;
+    color:#222;
+    letter-spacing: 5px;
+    cursor: pointer;
+  }
+  .score{
+    position: absolute;
+    top:210px;
+    left:300px;
+  }
+  .hiScore{
+    position: absolute;
+    top:210px;
+    right:300px;
+  }
+  h2 span{
+    transition: 0.5s;
+
+  }
+  h2:hover span:nth-child(1)
+  {
+    margin-right: 10px;
+  }
+  h2:hover span:nth-child(1):after
+  {
+    content: ":";
+  }
+  h2:hover span:nth-child(2)
+  {
+    margin-left: 10px;
+  }
+  
+  h2:hover span{
+    color:#e4f5a4;
+    text-shadow:0 0 10px #d7ef7f,
+    0 0 20px #d7ef7f,
+    0 0 40px #d7ef7f,
+    0 0 100px #d7ef7f;
+  }
